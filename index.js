@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log(enteredText);
                 var botMessage = document.createElement('div');
                 botMessage.className = 'bot-message';
-                botMessage.textContent = "Wominspiration: Okay! Here is someone who is just like you: " + llamaMessage;
+                botMessage.textContent = "EmpowerHer: Okay! Here is someone who is just like you: " + llamaMessage;
                 chatContainer.appendChild(botMessage);
                 
                 chatContainer.scrollTop = chatContainer.scrollHeight;
