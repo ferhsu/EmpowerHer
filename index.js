@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Bot message (for demonstration purposes, you can replace this with actual bot responses)
                 var botMessage = document.createElement('div');
                 botMessage.className = 'bot-message';
-                botMessage.textContent = llamaMessage;
+                botMessage.textContent = "Okay! Here is someone who is just like you: " + llamaMessage;
                 chatContainer.appendChild(botMessage);
 
-                // Clear input field
-                userInput.value = '';
+                // // Clear input field
+                // userInput.value = '';
 
-                // Scroll to the bottom of the chat container
-                chatContainer.scrollTop = chatContainer.scrollHeight;
+                // // Scroll to the bottom of the chat container
+                // chatContainer.scrollTop = chatContainer.scrollHeight;
             }) 
             .catch((error) => {
                 console.error("Error:", error);
@@ -43,7 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
         // .catch((error) => {
         //     console.error("Error:", error);
         // });
+        // Clear input field
+        userInput.value = '';
 
+        // Scroll to the bottom of the chat container
+        chatContainer.scrollTop = chatContainer.scrollHeight;
         
 
     });
