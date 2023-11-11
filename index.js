@@ -18,37 +18,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 llamaMessage = response.data;
                 console.log(response.data);
                 console.log(enteredText);
-                // Bot message (for demonstration purposes, you can replace this with actual bot responses)
                 var botMessage = document.createElement('div');
                 botMessage.className = 'bot-message';
-                botMessage.textContent = "Okay! Here is someone who is just like you: " + llamaMessage;
+                botMessage.textContent = "Wominspiration: Okay! Here is someone who is just like you: " + llamaMessage;
                 chatContainer.appendChild(botMessage);
-
-                // // Clear input field
-                // userInput.value = '';
-
-                // // Scroll to the bottom of the chat container
-                // chatContainer.scrollTop = chatContainer.scrollHeight;
+                
+                chatContainer.scrollTop = chatContainer.scrollHeight;
             }) 
             .catch((error) => {
                 console.error("Error:", error);
             })
 
-
-        // axios.get("/get_data")
-        // .then((response) => {
-        //     llamaMessage = response.data;
-        //     console.log(data.message); // Handle the data as needed
-        // })
-        // .catch((error) => {
-        //     console.error("Error:", error);
-        // });
-        // Clear input field
         userInput.value = '';
 
         // Scroll to the bottom of the chat container
         chatContainer.scrollTop = chatContainer.scrollHeight;
-        
-
     });
 });
