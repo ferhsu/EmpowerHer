@@ -132,8 +132,38 @@ a:hover, a:focus {
     border-radius: 5px; /* Add border-radius for rounded corners */
     margin-top: 10px; /* Add margin for spacing */
     position: absolute;
-    top: 70%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 6;
+}
+
+#chatContainer {
+    display: flex;
+    flex-direction: column; /* Display messages in a vertical column-reverse layout */
+    margin: auto;
+    width: 40%; /* Adjust the width as needed */
+    max-height: 350px; /* Set a maximum height for the chat container */
+    overflow-y: auto; /* Add a vertical scrollbar if needed */
+    background-color: #f5f1e9; /* Set background color for better visibility */
+    padding: 10px;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+.user-message, .bot-message {
+    background-color: #826C6C; /* Set background color */
+    color: #f5f1e9; /* Set text color */
+    padding: 10px;
+    border-radius: 10px; /* Add border-radius for rounded corners */
+    margin-bottom: 10px;
+    display: inline-block;
+    max-width: 100%; /* Limit the width of messages */
+}
+
+.user-message {
+    align-self: flex-end; /* Align user messages to the right */
+}
+
+.bot-message {
+    align-self: flex-start; /* Align bot messages to the left */
 }
