@@ -30,6 +30,6 @@ else:
 
 # either way we can now query the index
 query_engine = index.as_query_engine()
-response = query_engine.query("What school did the author attend?")
+response = query_engine.query("Who was a Indian woman?")
 print(response)
 # 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
