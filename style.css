@@ -1,0 +1,139 @@
+*{ 
+    margin: 0;
+    padding:0;
+}
+
+.main{
+    width: 100%;
+    background: linear-gradient(to top, rgba(194, 188, 188, 0.5)0%, rgba(194, 188, 188, 0.5)0%), url('https://img.freepik.com/free-vector/hand-drawn-abstract-doodle-background_23-2149319088.jpg?w=1800&t=st=1699658597~exp=1699659197~hmac=f5aa939e0789c781e768e39ab059acd3b7eef4ac295f3b6b3a4c052692b6485a') ;
+    background-position: center;
+    background-size: cover;
+    height: 109vh;
+}   
+
+.navbar{
+    width:100%;
+    height: 75px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+
+}
+.menu {
+    width: 400px;
+    float:left;
+    height:70px;
+    padding-top: 26px;
+    padding-left: 1280px;
+    color: #f5f1e9;
+    position: fixed;
+    z-index: 2
+}
+
+.icon {
+    width: 200px;
+    float: left;
+    height: 70px;
+    z-index: 2
+}
+
+.logo {
+    color: #f5f1e9;
+    font-size: 35px;
+    font-family: serif;
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    position: fixed;
+    z-index: 2
+}
+
+.content {
+    height: auto;
+    margin: auto;
+    color: #826C6C;
+    padding-left: 25px;
+    text-align: left; /* Center the content */
+}
+
+.content .par {
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1 {
+    font-family: serif;
+    font-size: 50px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+    
+}
+
+a {  
+        color:#f5f1e9;
+        text-decoration:none;
+}
+
+a:hover, a:focus {
+    text-decoration:underline;
+}
+    
+
+.top-bar {
+    height: 55px; /* Adjust the height as needed */
+    background-color:#826C6C;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1
+}
+
+.square {
+    width: 500px; /* Adjust the size as needed */
+    height: 450px; /* Adjust the size as needed */
+    background-color: #826C6C; /* Set the background color */
+    border-radius: 20px; /* Adjust the border-radius to make it rounded */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5; /* Set a higher z-index to place it above other elements */
+}
+
+.submit {
+    background-color: #826C6C; 
+    color: #f5f1e9; /* White text color */
+    padding: 10px 20px; /* Padding for better appearance */
+    font-family: serif;
+    font-size: 16px; /* Font size */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    cursor: pointer; /* Add a pointer cursor on hover */
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
+
+.submit:hover {
+    background-color: #6e5a5a; 
+}
+
+.text-field {
+    padding: 10px; /* Padding for better appearance */
+    font-size: 16px; /* Font size */
+    background-color: #f5f1e9;
+    width: 400px;
+    font-family: serif;
+    border: 1px solid #ccc; /* Add a border for clarity */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    margin-top: 10px; /* Add margin for spacing */
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 6;
+}
