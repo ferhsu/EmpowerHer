@@ -8,6 +8,7 @@
     background: linear-gradient(to top, rgba(194, 188, 188, 0.5)0%, rgba(194, 188, 188, 0.5)0%), url('https://img.freepik.com/free-vector/hand-drawn-abstract-doodle-background_23-2149319088.jpg?w=1800&t=st=1699658597~exp=1699659197~hmac=f5aa939e0789c781e768e39ab059acd3b7eef4ac295f3b6b3a4c052692b6485a') ;
     background-position: center;
     background-size: cover;
+    background-attachment: fixed;
     height: 109vh;
 }   
 
@@ -19,22 +20,12 @@
     align-items: center;
 
 }
-.menu {
-    width: 400px;
-    float:left;
-    height:70px;
-    padding-top: 26px;
-    padding-left: 1280px;
-    color: #f5f1e9;
-    position: fixed;
-    z-index: 2
-}
 
 .icon {
     width: 200px;
     float: left;
     height: 70px;
-    z-index: 2
+
 }
 
 .logo {
@@ -45,22 +36,32 @@
     float: left;
     padding-top: 10px;
     position: fixed;
-    z-index: 2
+    z-index: 5
 }
 
 .content {
     height: auto;
     margin: auto;
-    color: #826C6C;
-    padding-left: 25px;
+    color: #f5f1e9;
+    max-width: 20%;
     text-align: left; /* Center the content */
+    position: relative; /* Add this line */
+    z-index: 4;
+    margin-left: 2%;
+    position: fixed;
+    letter-spacing: 2px;
+    line-height: 30px;
 }
 
 .content .par {
     padding-bottom: 25px;
-    font-family: Arial;
-    letter-spacing: 1.2px;
+    font-family: Serif;
+
+    letter-spacing: 2px;
     line-height: 30px;
+    z-index: 4;
+    
+   
 }
 
 .content h1 {
@@ -68,6 +69,9 @@
     font-size: 50px;
     margin-top: 9%;
     letter-spacing: 2px;
+    z-index: 4;
+    position: fixed;
+
     
 }
 
@@ -87,19 +91,17 @@ a:hover, a:focus {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1
+    z-index: 3
 }
 
 .square {
-    width: 500px; /* Adjust the size as needed */
-    height: 450px; /* Adjust the size as needed */
-    background-color: #826C6C; /* Set the background color */
-    border-radius: 20px; /* Adjust the border-radius to make it rounded */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 5; /* Set a higher z-index to place it above other elements */
+ 
+    width: 23%; /* Adjust the size as needed */
+    height: 100%; /* Adjust the size as needed */
+    background-color: rgba(157, 141, 141); /* Set the background color */
+    position: fixed;
+
+    z-index: 2; /* Set a higher z-index to place it above other elements */
 }
 
 .submit {
@@ -111,11 +113,11 @@ a:hover, a:focus {
     border: none; /* Remove border */
     border-radius: 5px; /* Add border-radius for rounded corners */
     cursor: pointer; /* Add a pointer cursor on hover */
-    position: absolute;
+    position: fixed;
     top: 83%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 6;
+
 }
 
 .submit:hover {
@@ -125,27 +127,30 @@ a:hover, a:focus {
 .text-field {
     padding: 10px; /* Padding for better appearance */
     font-size: 16px; /* Font size */
-    background-color: #f5f1e9;
+    background-color: #fff;
     width: 400px;
     font-family: serif;
     border: 1px solid #ccc; /* Add a border for clarity */
     border-radius: 5px; /* Add border-radius for rounded corners */
     margin-top: 10px; /* Add margin for spacing */
-    position: absolute;
+    position: fixed;
     top: 75%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 6;
+
 }
 
 #chatContainer {
     display: flex;
     flex-direction: column; /* Display messages in a vertical column-reverse layout */
+    position: fixed;
     margin: auto;
+    left: 29%;
+    top: 20%;
     width: 40%; /* Adjust the width as needed */
-    max-height: 350px; /* Set a maximum height for the chat container */
+    height: 350px; /* Set a maximum height for the chat container */
     overflow-y: auto; /* Add a vertical scrollbar if needed */
-    background-color: #f5f1e9; /* Set background color for better visibility */
+    background-color: rgba(255,255,255,0.5); /* Set background color for better visibility */
     padding: 10px;
     border-radius: 10px; /* Add border-radius for rounded corners */
 }
