@@ -105,7 +105,7 @@ a:hover, a:focus {
 }
 
 .submit {
-    background-color: #826C6C; 
+    background-color: rgba(157, 141, 141); 
     color: #f5f1e9; /* White text color */
     padding: 10px 20px; /* Padding for better appearance */
     font-family: serif;
@@ -121,7 +121,7 @@ a:hover, a:focus {
 }
 
 .submit:hover {
-    background-color: #6e5a5a; 
+    background-color: #826C6C; 
 }
 
 .text-field {
@@ -162,6 +162,7 @@ a:hover, a:focus {
     margin-bottom: 10px;
     display: inline-block;
     max-width: 70%; /* Limit the width of messages */
+    word-wrap: break-word;
 }
 
 .user-message {
