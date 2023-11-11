@@ -156,19 +156,20 @@ a:hover, a:focus {
 }
 
 .user-message, .bot-message {
-    background-color: #826C6C; /* Set background color */
     color: #f5f1e9; /* Set text color */
     padding: 10px;
     border-radius: 10px; /* Add border-radius for rounded corners */
     margin-bottom: 10px;
     display: inline-block;
-    max-width: 100%; /* Limit the width of messages */
+    max-width: 50%; /* Limit the width of messages */
 }
 
 .user-message {
+    background-color: #826C6C;
     align-self: flex-end; /* Align user messages to the right */
 }
 
 .bot-message {
+    background-color: rgba(157, 141, 141);
     align-self: flex-start; /* Align bot messages to the left */
 }
