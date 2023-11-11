@@ -1,4 +1,3 @@
-# from llama_index import VectorStoreIndex, SimpleDirectoryReader
 from dotenv import load_dotenv
 
 load_dotenv()
