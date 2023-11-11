@@ -5,6 +5,21 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+origins = ["*"]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 import logging
 import sys
 import os.path
@@ -15,34 +30,30 @@ from llama_index import (
     load_index_from_storage,
 )
 
-app = FastAPI()
+# app = FastAPI()
 
-@app.get("/items")
-def my_function():
 
-    logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+# @app.get("/get_data")
+# async def get_data():
+#     data = {"message": "This is data from the FastAPI backend."}
+#     return data
+
+@app.get("/process_input")
+def process_input(enteredText: str):
+
+    logging.basicConfig(stream=sys.stdout, level=logging.DEBUG)
     logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
 
     # check if storage already exists
     if not os.path.exists("./storage"):
-        # load the documents and create the index
         documents = SimpleDirectoryReader("data").load_data()
         index = VectorStoreIndex.from_documents(documents)
-        # store it for later
         index.storage_context.persist()
     else:
-        # load the existing index
         storage_context = StorageContext.from_defaults(persist_dir="./storage")
         index = load_index_from_storage(storage_context)
 
-    # either way we can now query the index
     query_engine = index.as_query_engine()
-    query = "What school did the author attend?"
-    response = query_engine.query(query)
-    # element = response[0].event
-    # print(response)
-    return {"question": query, "answer": response.response}
-
-@app.put("/items")
-def userQuery(query: str = "What is the author's name?"):
-    return {"query": query}
+    response = query_engine.query(enteredText)
+    # return {"question": enteredText, "answer": response.response}
+    return response.response
