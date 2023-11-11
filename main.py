@@ -46,5 +46,5 @@ def process_input(enteredText: str):
         index = load_index_from_storage(storage_context)
 
     query_engine = index.as_query_engine()
-    response = query_engine.query(enteredText + "Who is most like me?")
+    response = query_engine.query(enteredText + "Tell me about someone who is most like me.")
     return response.response

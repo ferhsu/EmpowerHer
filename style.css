@@ -161,15 +161,15 @@ a:hover, a:focus {
     border-radius: 10px; /* Add border-radius for rounded corners */
     margin-bottom: 10px;
     display: inline-block;
-    max-width: 50%; /* Limit the width of messages */
+    max-width: 70%; /* Limit the width of messages */
 }
 
 .user-message {
-    background-color: #826C6C;
+    background-color: rgba(157, 141, 141);
     align-self: flex-end; /* Align user messages to the right */
 }
 
 .bot-message {
-    background-color: rgba(157, 141, 141);
+    background-color: #826C6C;
     align-self: flex-start; /* Align bot messages to the left */
 }
