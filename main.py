@@ -30,14 +30,6 @@ from llama_index import (
     load_index_from_storage,
 )
 
-# app = FastAPI()
-
-
-# @app.get("/get_data")
-# async def get_data():
-#     data = {"message": "This is data from the FastAPI backend."}
-#     return data
-
 @app.get("/process_input")
 def process_input(enteredText: str):
 
@@ -55,5 +47,4 @@ def process_input(enteredText: str):
 
     query_engine = index.as_query_engine()
     response = query_engine.query(enteredText + "Who is most like me?")
-    # return {"question": enteredText, "answer": response.response}
     return response.response
